@@ -10,10 +10,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  .carousel-inner img {
-    width: 100%;
-    height: 100%; 
-  }
   body{
     background-color:rgb(24,24,24);
     -webkit-user-select:none;
@@ -21,24 +17,31 @@
     -o-user-select:none;
     user-select:none;
   }
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  .col-sm-5{
+  font-family: "Lucida Console", "Courier New", monospace;
+  }
 </style> 
 </head>
 <body>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container">
     <!-- Brand/logo -->
-    <a class="navbar-brand" style="color: goldenrod;" href="/index"><strong>Laurier</strong></a>
+    <a class="navbar-brand" style="color: goldenrod;" href="index.html"><strong>Laurier</strong></a>
     
     <!-- Links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="/index">Index</a>
+        <a class="nav-link" href="index.html">Index</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/commands">Commands</a>
+        <a class="nav-link" href="commands.html">Commands</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/invite"><b>Invite Link</b></a>
+        <a class="nav-link" href="invite.html"><b>Invite Link</b></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#myModal">此處整修中...</a>
@@ -69,9 +72,42 @@
         </div>
       </div>
     </div>
-  </div><br>
-  <div class="alert alert-info" style="text-align: center; color: rgb(46, 79, 150);">
-    <h4><strong>此處整修中..</strong></h4>
+  </div>
+  <h3 class="alert alert-success" style="color: rgb(48, 196, 73);"><strong>Link</strong></h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+    <div class="card bg-dark text-white" style="width: auto;">
+      <img class="card-img-top" src="https://cdn.discordapp.com/attachments/681347699634864147/911530455294169098/8_n.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">Invite Bot</h4>
+        <p class="card-text">想邀請機器人到自己的伺服器嗎？<br>快點擊按鈕吧！</p>
+        <a href="https://discordapp.com/api/oauth2/authorize?client_id=681407770083590154&permissions=8&scope=bot" class="btn btn-info" target="_blank">Invite Bot</a>
+      </div>
+    </div><br>
+    </div>
+    <div class="col-sm-5">
+    <div class="card bg-dark text-white" style="width: auto;">
+      <img class="card-img-top" src="https://cdn.discordapp.com/attachments/681347699634864147/911530455294169098/8_n.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">Discord Server</h4>
+        <p class="card-text">想搶先體驗剛出爐的指令嗎？<br>快加入我們的伺服器！</p>
+        <a href="https://discord.gg/mbPAcVH" class="btn btn-info" target="_blank">Join Us</a>
+      </div>
+    </div><br>
+    </div>
+    <div class="col-sm-5">
+    <div class="card bg-dark text-white" style="width: auto;">
+      <img class="card-img-top" src="https://cdn.discordapp.com/attachments/681347699634864147/911530455294169098/8_n.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">Question</h4>
+        <p class="card-text">使用上遇到問題了嗎？來私訊我！<br>Discord：Ming#6047</p>
+        <a href="https://discord.com/" class="btn btn-info" target="_blank">Report</a>
+      </div>
+    </div><br>
+    </div>
+  </div>
+  </div>
   </div>
   </div>
 </body>
