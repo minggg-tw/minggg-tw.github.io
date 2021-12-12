@@ -12,29 +12,27 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<div id="navigation">
+  <ul>
+      <li><a href="/index">Index</a></li>
+      <li><a href="/commands">Commands</a></li>
+      <li><a href="/invite">Invite</a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+  function toggle(){
+      var sec = document.getElementById('sec');
+      var nav = document.getElementById('navigation');
+      sec.classList.toggle('active');
+      nav.classList.toggle('active');
+  }
+</script>
 <body>
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <div class="container">
-    <!-- Brand/logo -->
-    <a class="navbar-brand" style="color: goldenrod;" href="/index"><strong>Laurier</strong></a>
-    
-    <!-- Links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/index">Index</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/commands"><b>Commands</b></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/invite">Invite Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#myModal">此處整修中...</a>
-      </li>
-    </ul>
-  </div>
-  </nav>
+  <section class="banner" id="sec">
+      <header>
+          <a href="#" class="logo">Laurier</a>
+          <div id="toggle" onclick="toggle()"></div>
+      </header>
   <div class="container" >
   <div class="modal fade" id="myModal">
     <div class="modal-dialog">
@@ -85,6 +83,7 @@
       </div>
     </div>
   </div>
+  </section>
 </body>
 <footer>
   <div style="text-align:center; color: seashell; background-color:rgb(70, 70, 70);">Copyright © 2021 Ming. All rights reserved | <a href="https://moba.garena.tw/" style="color: seashell; text-decoration:none;" target="_blank">Source:Garena傳說對決</a></div>
