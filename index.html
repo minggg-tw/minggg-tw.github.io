@@ -12,111 +12,109 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <div class="container">
-    <!-- Brand/logo -->
-    <a class="navbar-brand" style="color: goldenrod;" href="/index"><strong>Laurier</strong></a>
-    
-    <!-- Links -->
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="/index"><b>Index</b></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/commands">Commands</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/invite">Invite Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#myModal">此處整修中...</a>
-      </li>
+<div id="navigation">
+    <ul>
+        <li><a href="/index">Index</a></li>
+        <li><a href="/commands">Commands</a></li>
+        <li><a href="/invite">Invite</a></li>
     </ul>
-  </div>
-  </nav>
-  <br>
-  <div class="container" >
-    <div id="demo" class="carousel slide" data-ride="carousel">
+</div>
+<script type="text/javascript">
+    function toggle(){
+        var sec = document.getElementById('sec');
+        var nav = document.getElementById('navigation');
+        sec.classList.toggle('active');
+        nav.classList.toggle('active');
+    }
+</script>
+<body>
+    <section class="banner" id="sec">
+        <header>
+            <a href="#" class="logo">Laurier</a>
+            <div id="toggle" onclick="toggle()"></div>
+        </header>
+    <div class="container" >
+        <div id="demo" class="carousel slide" data-ride="carousel">
 
-      <!-- Indicators -->
-      <ul class="carousel-indicators">
-        <li data-target="#demo" data-slide-to="0" class="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-        <li data-target="#demo" data-slide-to="2"></li>
-      </ul>
-      
-      <!-- The slideshow -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://cdngarenanow-a.akamaihd.net/mgames/kgcenter/tw/client/GameData/Hero/15/skin/20171107120552-6232.jpg" class="rounded" alt="halloween" width="1920" height="870">
-        </div>
-        <div class="carousel-item">
-          <img src="https://cdngarenanow-a.akamaihd.net/mgames/kgcenter/tw/client/GameData/Hero/15/skin/20170824061449-1918.jpg" class="rounded" alt="Swimsuit" width="1920" height="870">
-        </div>
-        <div class="carousel-item">
-          <img src="https://i.imgur.com/EvEwFbG.jpg" class="rounded" alt="Grace" width="1920" height="870">
-        </div>
-      </div>
-      
-      <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
-    </div>
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <p class="modal-title" style="font-size: 24px;">⚠ Warning!!</p>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="https://cdngarenanow-a.akamaihd.net/mgames/kgcenter/tw/client/GameData/Hero/15/skin/20171107120552-6232.jpg" class="rounded" alt="halloween" width="1920" height="870">
+            </div>
+            <div class="carousel-item">
+            <img src="https://cdngarenanow-a.akamaihd.net/mgames/kgcenter/tw/client/GameData/Hero/15/skin/20170824061449-1918.jpg" class="rounded" alt="Swimsuit" width="1920" height="870">
+            </div>
+            <div class="carousel-item">
+            <img src="https://i.imgur.com/EvEwFbG.jpg" class="rounded" alt="Grace" width="1920" height="870">
+            </div>
         </div>
         
-        <!-- Modal body -->
-        <div class="modal-body">
-          就說在整修了嘛..再等等拉!!
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
         </div>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+        <div class="modal-content">
         
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <!-- Modal Header -->
+            <div class="modal-header">
+            <p class="modal-title" style="font-size: 24px;">⚠ Warning!!</p>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+            就說在整修了嘛..再等等拉!!
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
         </div>
-      </div>
+        </div>
+    </div><br>
+    <h3 class="alert alert-success" style="color: rgb(48, 196, 73);"><strong>Author</strong></h3>
+    <div class="container">
+        <h4 style="color: seashell;">Discord<br><a style="font-size: 18px;">&emsp;- Ming#6047</a></h4>
+        <h4 style="color: seashell;">Hobbies<br><a style="font-size: 18px;">&emsp;- Anime<br>&emsp;- J-POP<br>&emsp;- Hololive💖</a></h4>
+        <h4 style="color: seashell;">Game ID<br><a style="font-size: 18px;">&emsp;- ɴᴜᴀɴ❀</a></h4>
+        <h4 style="color: seashell;">Main<br><a style="font-size: 18px;">&emsp;- AP<br>&emsp;- TOP</a></h4>
     </div>
-  </div><br>
-  <h3 class="alert alert-success" style="color: rgb(48, 196, 73);"><strong>Author</strong></h3>
-  <div class="container">
-    <h4 style="color: seashell;">Discord<br><a style="font-size: 18px;">&emsp;- Ming#6047</a></h4>
-    <h4 style="color: seashell;">Hobbies<br><a style="font-size: 18px;">&emsp;- Anime<br>&emsp;- J-POP<br>&emsp;- Hololive💖</a></h4>
-    <h4 style="color: seashell;">Game ID<br><a style="font-size: 18px;">&emsp;- ɴᴜᴀɴ❀</a></h4>
-    <h4 style="color: seashell;">Main<br><a style="font-size: 18px;">&emsp;- AP<br>&emsp;- TOP</a></h4>
-  </div>
-  <h3 class="alert alert-success" style="color: rgb(48, 196, 73);"><strong>Bot Status</strong></h3>
-  <div class="container">
-    <h4 style="color: seashell;">Last Update</h4>
-    <div class="wrap">
-    <p style="color: seashell; font-size: 16px;">&emsp;- Dec 04,2021&ensp;10:37 GMT+8</p>
-  </div><hr style="background-color: seashell;">
-    <h4 style="color: seashell;">Update Log</h4>
-    <div class="wrap">
-      <p style="color: seashell; font-size: 16px;">&emsp;- Jan 06,2020&ensp;Ver2.2&emsp;更新help內容</p>
-      <p style="color: seashell; font-size: 16px;">&emsp;- Dec 23,2019&ensp;Ver2.1&emsp;新增Embed</p>
-      <p style="color: seashell; font-size: 16px;">&emsp;- Dec 16,2019&ensp;Ver2.0&emsp;移除成員加入/退出訊息</p><br>
-      <p style="color: seashell; font-size: 16px;">&emsp;- Dec 01,2019&ensp;Ver1.3&emsp;新增狀態訊息與更新時間</p>
-      <p style="color: seashell; font-size: 16px;">&emsp;- Nov 27,2019&ensp;Ver1.2&emsp;新增Help指令</p>
-      <p style="color: seashell; font-size: 16px;">&emsp;- Nov 25,2019&ensp;Ver1.1&emsp;新增延遲時間</p>
-      <p style="color: seashell; font-size: 16px;">&emsp;- Nov 24,2019&ensp;Ver1.0&emsp;初啟動</p>
+    <h3 class="alert alert-success" style="color: rgb(48, 196, 73);"><strong>Bot Status</strong></h3>
+    <div class="container">
+        <h4 style="color: seashell;">Last Update</h4>
+        <div class="wrap">
+        <p style="color: seashell; font-size: 16px;">&emsp;- Dec 04,2021&ensp;10:37 GMT+8</p>
+    </div><hr style="background-color: seashell;">
+        <h4 style="color: seashell;">Update Log</h4>
+        <div class="wrap">
+        <p style="color: seashell; font-size: 16px;">&emsp;- Jan 06,2020&ensp;Ver2.2&emsp;更新help內容</p>
+        <p style="color: seashell; font-size: 16px;">&emsp;- Dec 23,2019&ensp;Ver2.1&emsp;新增Embed</p>
+        <p style="color: seashell; font-size: 16px;">&emsp;- Dec 16,2019&ensp;Ver2.0&emsp;移除成員加入/退出訊息</p><br>
+        <p style="color: seashell; font-size: 16px;">&emsp;- Dec 01,2019&ensp;Ver1.3&emsp;新增狀態訊息與更新時間</p>
+        <p style="color: seashell; font-size: 16px;">&emsp;- Nov 27,2019&ensp;Ver1.2&emsp;新增Help指令</p>
+        <p style="color: seashell; font-size: 16px;">&emsp;- Nov 25,2019&ensp;Ver1.1&emsp;新增延遲時間</p>
+        <p style="color: seashell; font-size: 16px;">&emsp;- Nov 24,2019&ensp;Ver1.0&emsp;初啟動</p>
+        </div>
     </div>
-  </div>
-  </div>
-  <footer>
-    <div style="text-align:center; color: seashell; background-color:rgb(70, 70, 70);">Copyright © 2021 Ming. All rights reserved | <a href="https://moba.garena.tw/" style="color: seashell; text-decoration:none;" target="_blank">Source:Garena傳說對決</a></div>
-    <!-- A footer for the page. -->
-  </footer>
+    </div>
+    </section>
+    <footer>
+        <div style="text-align:center; color: seashell; background-color:rgb(70, 70, 70);">Copyright © 2021 Ming. All rights reserved | <a href="https://moba.garena.tw/" style="color: seashell; text-decoration:none;" target="_blank">Source:Garena傳說對決</a></div>
+        <!-- A footer for the page. -->
+    </footer>
 </body>
 </html>
