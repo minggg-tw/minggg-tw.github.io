@@ -19,7 +19,7 @@
 }
 .container .card-body #card1:before,
 .container .card-body #card1:after{
-    background: linear-gradient(45deg,#00c3ff,#050303,#181818,#9bd400);
+    background: linear-gradient(45deg,#00c3ff,#181818,#181818,#9bd400);
 }
 .container .card-body #card2:before,
 .container .card-body #card2:after{
