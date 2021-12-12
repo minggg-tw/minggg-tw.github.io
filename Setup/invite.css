@@ -19,15 +19,15 @@
 }
 .container .card-body #card1:before,
 .container .card-body #card1:after{
-    background: linear-gradient(45deg,#00c3ff,#181818,#181818,#9bd400);
+    background: linear-gradient(45deg,#00c3ff,#00c3ff,#9bd400,#9bd400);
 }
 .container .card-body #card2:before,
 .container .card-body #card2:after{
-    background: linear-gradient(45deg,#ff7f07,#181818,#181818,#be1aff);
+    background: linear-gradient(45deg,#ff7f07,#ff7f07,#be1aff,#be1aff);
 }
 .container .card-body #card3:before,
 .container .card-body #card3:after{
-    background: linear-gradient(45deg,#ffee00,#181818,#181818,#d42000);
+    background: linear-gradient(45deg,#ffee00,#ffee00,#d42000,#d42000);
 }
 .container .card-body a:hover:before{
     inset: -3px;
