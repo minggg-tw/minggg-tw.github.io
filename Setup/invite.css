@@ -215,3 +215,12 @@ h2{
     margin-bottom: 10px;
     line-height: 1.4em;
 }
+@media (max-width: 767px){
+    .container1 .box:hover .content{
+        left: 0;
+    }
+    .container1 .box:hover:before,
+    .container1 .box:hover:after{
+        width: calc(100% - 40px);
+    }
+}
