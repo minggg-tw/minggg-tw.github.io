@@ -13,7 +13,6 @@ footer{
     font-family: "Lucida Console", "Courier New", monospace;
     height: 0px;
     line-height: 180%;
-    z-index: 50;
 }
 header{
     position: absolute;
@@ -109,13 +108,16 @@ header #toggle span:nth-child(2){
     list-style: none;
 }
 #navigation ul li a{
-    color: #fff;
+    color: rgb(172, 172, 172);
     text-decoration: none;
     display: inline-block;
     font-size: 2em;
     font-weight: 600;
     text-transform: uppercase;
     margin-top: 5px;
+}
+#navigation ul li:hover a{
+    color: #fff;
 }
 @media (max-width: 767px){
     header{
@@ -137,5 +139,8 @@ header #toggle span:nth-child(2){
     }
     header .logo{
         margin-left: -5%
+    }
+    footer{
+        font-size: 13px;
     }
 }
