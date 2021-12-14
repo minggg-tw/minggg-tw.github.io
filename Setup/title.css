@@ -16,9 +16,9 @@
         text-shadow: 0 0 10px #ffae00,
         0 0 20px #ffae00,
         0 0 40px #ffae00,
+        0 0 60px #ffae00,
         0 0 80px #ffae00,
-        0 0 160px #ffae00,
-        0 0 400px #ffae00;
+        0 0 120px #ffae00;
     }
     30%,70%{
         color: #fff;
@@ -26,9 +26,9 @@
         text-shadow: 0 0 10px #ffae00,
         0 0 20px #ffae00,
         0 0 40px #ffae00,
+        0 0 60px #ffae00,
         0 0 80px #ffae00,
-        0 0 160px #ffae00,
-        0 0 400px #ffae00;
+        0 0 120px #ffae00;
     }
     100%{
         color: transparent;
