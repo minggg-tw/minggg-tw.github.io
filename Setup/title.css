@@ -3,7 +3,6 @@
     display: flex;
     font-family: 'Bad Script', cursive;
     color: transparent;
-    -webkit-box-reflect: below -10px linear-gradient(transparent,#0004);
 }
 #title span{
     animation: animate1 3s linear infinite;
