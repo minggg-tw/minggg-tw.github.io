@@ -1,3 +1,3 @@
 # Laurier
-© 2021 Ming.
+© 2022 Ming.
 A website for Discord bot Laurier.
