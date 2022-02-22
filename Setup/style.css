@@ -128,7 +128,6 @@ header #toggle span:nth-child(2){
     overflow: hidden;
     transition: 1s;
     border-right: 5px solid var(--clr);
-    width: 0%;
 }
 #navigation ul li a:hover::before{
     width: 100%;
@@ -150,8 +149,13 @@ header #toggle span:nth-child(2){
         width: 250px;
     }
     #navigation ul li a{
+        color: #fff;
         font-size: 1.5em;
         margin: 5px 0;
+    }
+    #navigation ul li a:hover::before{
+        width: 0%;
+        color: #fff;
     }
     header .logo{
         margin-left: -5%
