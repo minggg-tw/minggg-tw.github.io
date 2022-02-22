@@ -155,7 +155,7 @@ header #toggle span:nth-child(2){
     }
     #navigation ul li a:hover::before{
         color: rgb(200,200,200);
-        color: #fff;
+        width: 0%;
     }
     header .logo{
         margin-left: -5%
