@@ -103,21 +103,37 @@ header #toggle span:nth-child(2){
     position: relative;
     display: flex;
     flex-direction: column;
+    gap: 30px;
 }
 #navigation ul li{
     list-style: none;
 }
 #navigation ul li a{
-    color: rgb(172, 172, 172);
+    position: relative;
+    color: transparent;
     text-decoration: none;
-    display: inline-block;
+    line-height: 1em;
+    letter-spacing: 2px;
     font-size: 2em;
     font-weight: 600;
     text-transform: uppercase;
-    margin-top: 5px;
+    margin-top: 50px;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.5);
 }
-#navigation ul li:hover a{
-    color: #fff;
+#navigation ul li a::before{
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0%;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 5px solid var(--clr);
+    width: 0%;
+}
+#navigation ul li a:hover::before{
+    width: 100%;
+    -webkit-text-stroke: 1px var(--clr);
+    filter: drop-shadow(0 0 25px var(--clr));
 }
 @media (max-width: 767px){
     header{
