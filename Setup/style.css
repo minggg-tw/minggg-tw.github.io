@@ -149,12 +149,12 @@ header #toggle span:nth-child(2){
         width: 250px;
     }
     #navigation ul li a{
-        color: #fff;
+        color: rgb(200,200,200);
         font-size: 1.5em;
         margin: 5px 0;
     }
     #navigation ul li a:hover::before{
-        width: 0%;
+        color: rgb(200,200,200);
         color: #fff;
     }
     header .logo{
