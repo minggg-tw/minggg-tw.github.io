@@ -151,6 +151,7 @@ header #toggle span:nth-child(2){
     #navigation ul li a{
         color: rgb(200,200,200);
         font-size: 1.5em;
+        line-height: 1.5em
         margin: 5px 0;
     }
     #navigation ul li a:hover::before{
