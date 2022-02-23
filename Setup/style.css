@@ -112,7 +112,6 @@ header #toggle span:nth-child(2){
     position: relative;
     color: transparent;
     text-decoration: none;
-    line-height: 1em;
     letter-spacing: 2px;
     font-size: 2em;
     font-weight: 600;
@@ -147,6 +146,9 @@ header #toggle span:nth-child(2){
     }
     #navigation{
         width: 250px;
+    }
+    #navigation ul li{
+        line-height: 1.5em;
     }
     #navigation ul li a{
         color: rgb(200,200,200);
