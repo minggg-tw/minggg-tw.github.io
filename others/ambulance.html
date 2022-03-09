@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>深夜醫護局</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ya.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <header>
+                <a href="#" class="logo">醫護局申請頻道BOT</a>
+            </header>
+            <br>
+            <div class="row100">
+                <div class="col">
+                    <input type="submit" value="審核未通過" onclick="no()" data-toggle="modal" data-target="#myModal">
+                    <input type="submit" value="暫停招收" onclick="stop()" data-toggle="modal" data-target="#myModal" id="btm">
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputbox">
+                        <input type="text" name="" required="required" id="name" value="<@!563194428643082250>">
+                        <span class="text">Discord ID</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <p style="color: #fff; font-size: 20px;">面試時間</p>
+                    <input type="date" id="start" name="trip-start" value="" min="2022-01-01">
+                    <input type="time" id="time" name="meeting-time" value="" min="00:00">
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <input type="submit" value="面試" onclick="sendMessage()" data-toggle="modal" data-target="#myModal">
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <p style="color: #fff; font-size: 20px;">上線時間</p>
+                    <span>從</span>
+                    <input type="time" id="srtime" name="meeting-time" value="" min="00:00">
+                    <span>到</span>
+                    <input type="time" id="edtime" name="meeting-time" value="" min="00:00">
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <input type="submit" value="申請公告" onclick="invite()" data-toggle="modal" data-target="#myModal">
+                </div>
+            </div>
+            <p class="footer">Copyright © 2022 Ming. All Right Reserved</p>
+            <p id="gfg"></p>
+            <p class="date" id="date"></p>
+        </div>
+    </section>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            
+                <div class="modal-header">
+                    <p class="modal-title" style="font-size: 24px;">⚠ Success!!</p>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <div class="modal-body">
+                    訊息已發送!!
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // webhookurl = "https://discord.com/api/webhooks/950668693099139112/PHqK_1t_fQfookfPEsjFjbEEKxMSh10WmoBOjETrtU6rqH_c6jEgc1btTA8H2bzxekPO" //測試頻道
+    webhookurl = "https://discord.com/api/webhooks/950695808586633238/lnPiHTu1jY2hYc0_TDuea7bexZBByMCCKdWb6oVR0l1Nn3LICjozxJxI6bLIZuV_-Ghx" //申請頻道
+
+    function sendMessage() {
+        name = document.getElementById("name").value;
+        date1 = document.getElementById("start").value;
+        time = document.getElementById("time").value;
+        document.getElementById("name").value="";
+        if(date1 != ""){
+            date1 = date1 + " ";
+        }
+
+        var Today = new Date(); 
+        var date = document.querySelector(".date"); 
+        date.innerHTML = Today;
+        date = document.getElementById("date").innerHTML;
+
+        var request = new XMLHttpRequest();
+        request.open("POST", webhookurl);
+        request.setRequestHeader('Content-type', 'application/json');
+
+        var myEmbed = {
+        author: {
+            name: "🚑深夜醫護局招收公告🚑",
+            icon_url: "https://cdn.discordapp.com/attachments/681347699634864147/911530455294169098/8_n.png"
+        },
+        description: name+" 恭喜通過第一階段申請，請於`"+date1+time+"`至面試頻道面試，並請先熟讀醫護局公告規章，若時間無法配合可私訊 <@&928253834822811699> 以上職位高層或 <@!716542013192798298> 調整。",
+        footer: {
+            text: date
+        },
+        color: hexToDecimal("#5dde7f")
+        }
+
+        var params = {
+        username: "✱醫護局大JJ院長の小秘酥✱",
+        content: ":loudspeaker: "+name,
+        embeds: [ myEmbed ]
+        }
+
+        request.send(JSON.stringify(params));
+
+        function hexToDecimal(hex) {
+        return parseInt(hex.replace("#",""), 16)
+        }
+    }
+    function no() {
+        var request = new XMLHttpRequest();
+        request.open("POST", webhookurl);
+        request.setRequestHeader('Content-type', 'application/json');
+
+        var myEmbed = {
+            description: "▲ 以上申請已經審核過，尚有部份條件未符合，建議先去體驗其它公職!! ▲",
+            color: hexToDecimal("#c771d9")
+        }
+
+        var params = {
+        username: "✱醫護局大JJ院長の小秘酥✱",
+        embeds: [ myEmbed ]
+        }
+
+        request.send(JSON.stringify(params));
+
+        function hexToDecimal(hex) {
+        return parseInt(hex.replace("#",""), 16)
+        }
+    }
+    function stop() {
+        var request = new XMLHttpRequest();
+        request.open("POST", webhookurl);
+        request.setRequestHeader('Content-type', 'application/json');
+
+        var myEmbed = {
+            description: "-----------------------目前醫護局暫停招收‼️ -----------------------",
+            color: hexToDecimal("#e25454")
+        }
+
+        var params = {
+        username: "✱醫護局大JJ院長の小秘酥✱",
+        embeds: [ myEmbed ],
+        }
+
+        request.send(JSON.stringify(params));
+
+        function hexToDecimal(hex) {
+        return parseInt(hex.replace("#",""), 16)
+        }
+    }
+    function invite() {
+        srtime = document.getElementById("srtime").value;
+        edtime = document.getElementById("edtime").value;
+
+        itime = "";
+        if(srtime != "" & edtime != ""){
+            itime = "\n優先審核時段:`"+srtime+"~"+edtime+"`"
+        }
+
+        var request = new XMLHttpRequest();
+        request.open("POST", webhookurl);
+        request.setRequestHeader('Content-type', 'application/json');
+
+        var myEmbed = {
+            title: "✨ 醫護局招收人才 ✨",
+            description: "目前招收人員，上線時數高，薪資優渥 :gem:"+itime,
+            fields: [
+                {
+                "name": "申請格式",
+                "value": "```fix\n性別：\n有當過醫護嗎：\n真實年齡：\n上線時間：(請用24小時制)```",
+                },
+                {
+                "name": "申請注意事項",
+                "value": "```yaml\n📌上線時間請精確，不要自己打了上班時間卻沒看到人⏰\n📌請先了解醫護局公告規章，若我們覺得可以會通知面試💘\n📌醫護局不招收已被黑名單的市民唷～請自己確保無不良紀錄📜\n📌申請後請勿自行私訊高層有無通過，通過審核會直接在這邊公布⚠️```",
+                }
+            ],
+            color: hexToDecimal("#c771d9")
+        }
+
+        var params = {
+        username: "✱醫護局大JJ院長の小秘酥✱",
+        content: "<@&928253834730565665>",
+        embeds: [ myEmbed ]
+        }
+
+        request.send(JSON.stringify(params));
+
+        function hexToDecimal(hex) {
+        return parseInt(hex.replace("#",""), 16)
+        }
+    }
+</script>
+</html>
