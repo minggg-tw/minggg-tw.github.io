@@ -85,8 +85,8 @@
     </div>
 </body>
 <script>
-    // webhookurl = "https://discord.com/api/webhooks/950668693099139112/PHqK_1t_fQfookfPEsjFjbEEKxMSh10WmoBOjETrtU6rqH_c6jEgc1btTA8H2bzxekPO" //測試頻道
-    webhookurl = "https://discord.com/api/webhooks/950695808586633238/lnPiHTu1jY2hYc0_TDuea7bexZBByMCCKdWb6oVR0l1Nn3LICjozxJxI6bLIZuV_-Ghx" //申請頻道
+    webhookurl = "https://discord.com/api/webhooks/950668693099139112/PHqK_1t_fQfookfPEsjFjbEEKxMSh10WmoBOjETrtU6rqH_c6jEgc1btTA8H2bzxekPO" //測試頻道
+    // webhookurl = "https://discord.com/api/webhooks/950695808586633238/lnPiHTu1jY2hYc0_TDuea7bexZBByMCCKdWb6oVR0l1Nn3LICjozxJxI6bLIZuV_-Ghx" //申請頻道
 
     function sendMessage() {
         name = document.getElementById("name").value;
@@ -178,7 +178,7 @@
 
         itime = "";
         if(srtime != "" & edtime != ""){
-            itime = "\n優先審核時段:`"+srtime+"~"+edtime+"`"
+            itime = "\n<a:blueverified:894155322757877780> 優先審核時段:`"+srtime+"~"+edtime+"`"
         }
 
         var request = new XMLHttpRequest();
@@ -190,11 +190,11 @@
             description: "目前招收人員，上線時數高，薪資優渥 :gem:"+itime,
             fields: [
                 {
-                "name": "申請格式",
+                "name": "<a:greenverified:895017530953990164> 申請格式",
                 "value": "```fix\n性別：\n有當過醫護嗎：\n真實年齡：\n上線時間：(請用24小時制)```",
                 },
                 {
-                "name": "申請注意事項",
+                "name": "<a:purpleverified:894155508326473728> 申請注意事項",
                 "value": "```yaml\n📌上線時間請精確，不要自己打了上班時間卻沒看到人⏰\n📌請先了解醫護局公告規章，若我們覺得可以會通知面試💘\n📌醫護局不招收已被黑名單的市民唷～請自己確保無不良紀錄📜\n📌申請後請勿自行私訊高層有無通過，通過審核會直接在這邊公布⚠️```",
                 }
             ],
