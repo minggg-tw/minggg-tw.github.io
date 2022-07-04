@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 
 *{
     margin: 0;
@@ -29,6 +30,7 @@ section{
     left: 0;
     width: 80%;
     height: 100%;
+    /* background: rgba(0, 0, 0, 0.1); */
 }
 
 header{
@@ -67,7 +69,7 @@ header .navigation.active{
     align-items: center;
     flex-direction: column;
     background: #d3777d;
-    /* z-index: 5; */
+    z-index: 5;
 }
 
 header .navigation li{
@@ -90,6 +92,10 @@ header .navigation li a:hover{
     color: #333;
 }
 
+header .navigation li a.active{
+    cursor: not-allowed;
+}
+
 .banner{
     position: absolute;
     width: 100%;
@@ -103,6 +109,46 @@ header .navigation li a:hover{
     width: 100%;
     height: 100vh;
     background: linear-gradient(335deg,#f09d9d,#e06f6f,#ffc342,#ffc13b);
+}
+
+#intro{
+    position: relative;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    min-height: calc(100vh - 280px);
+    height: 300px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px;
+}
+
+.content p{
+    font-size: 1.2em;
+    color: #313131;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.content p strong{
+    font-size: 1.5em;
+}
+
+.imgbx img{
+    max-width: 400px;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate{
+    0%,100%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(50px);
+    }
 }
 
 .container #scene{
@@ -141,7 +187,7 @@ header .navigation li a:hover{
     color: #dfdfdf;
 }
 
-@media (max-width: 991px){
+@media (max-width: 992px){
     .bg::before{
         display: none;
     }
@@ -163,14 +209,14 @@ header .navigation li a:hover{
         width: 30px;
         height: 30px;
         cursor: pointer;
-        background: url(menu.png);
+        background: url(img/menu.png);
         background-position: center;
         background-repeat: no-repeat;
         transition: 0.2s;
         /* z-index: 100; */
     }
     .toggle.active{
-        background: url(close.png);
+        background: url(img/close.png);
         background-size: 25px;
         background-position: center;
         background-repeat: no-repeat;
@@ -194,5 +240,14 @@ header .navigation li a:hover{
     .container #scene #footer{
         padding-top: 3%;
         font-size: 2vw;
+    }
+    .imgbx{
+        display: none;
+    }
+    .content p {
+        font-size: 1em;
+    }
+    #intro{
+        padding: 10px;
     }
 }
