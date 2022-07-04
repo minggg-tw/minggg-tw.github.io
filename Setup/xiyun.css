@@ -164,14 +164,14 @@ header .navigation li a:hover{
         width: 30px;
         height: 30px;
         cursor: pointer;
-        background: url(/menu.png);
+        background: url(menu.png);
         background-position: center;
         background-repeat: no-repeat;
         transition: 0.2s;
         /* z-index: 100; */
     }
     .toggle.active{
-        background: url(/close.png);
+        background: url(close.png);
         background-size: 25px;
         background-position: center;
         background-repeat: no-repeat;
