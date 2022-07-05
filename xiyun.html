@@ -11,11 +11,11 @@
             <div class="container">
                 <div id="scene">
                     <h2 id="text">
-                        <span data-depth-y="2">X</span>
-                        <span data-depth-y="-4">i</span>
-                        <span data-depth-y="4">Y</span>
-                        <span data-depth-y="-6">u</span>
-                        <span data-depth-y="3">n</span>
+                        <span>X</span>
+                        <span>i</span>
+                        <span>Y</span>
+                        <span>u</span>
+                        <span>n</span>
                     </h2>
                     <p id="footer">Copyright © 2022 XiYun All Right Reserved</p>
                 </div>
@@ -30,8 +30,8 @@
                     <li><a class="active">首頁</a></li>
                     <li><a href="#">人民報社</a></li>
                     <li><a href="/intro">介紹</a></li>
-                    <li><a href="#">人員名單</a></li>
-                    <li><a href="#">連結</a></li>
+                    <li><a href="/member">政府團隊</a></li>
+                    <li><a href="/link">連結</a></li>
                 </ul>
             </header>
             <script>
@@ -40,6 +40,11 @@
                 menuToggle.onclick = function(){
                     menuToggle.classList.toggle('active')
                     navigation.classList.toggle('active')
+                }
+            </script>
+            <script>
+                document.oncontextmenu = function(){
+                    window.event.returnValue=false; 
                 }
             </script>
         </section>
