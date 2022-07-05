@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(205deg,#6fade0,#71a7d3,#c7c7c7,#ffffff);
+}
+
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    /* margin-bottom: 1rem; */
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert-success {
+    width: 100%;
+    padding-left: 20px;
+    background-color: #b4cae4;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card .content{
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: bottom 0.5s;
+}
+
+.container .card:hover .content{
+    bottom: 0px;
+}
+
+.container .card .content .contentBx h3{
+    color: #333;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 15px;
+    line-height: 1.1em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.container .card:hover .content .contentBx h3{
+    opacity: 1;
+    transform: translateY(0px);
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.bg::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Reggae One', cursive;
+}
+
+header .logo{
+    position: relative;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+header .navigation{
+    position: relative;
+    display: flex;
+}
+
+header .navigation.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #77a2d3;
+    z-index: 5;
+}
+
+header .navigation li{
+    list-style: none;
+}
+
+header .navigation li a{
+    display: inline-block;
+    color: #333;
+    font-weight: 400;
+    margin-left: 10px;
+    padding: 8px 15px;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+header .navigation li a.active,
+header .navigation li a:hover{
+    background: #333;
+    color: #fff;
+}
+
+header .navigation li a.active{
+    cursor: not-allowed;
+}
+
+.banner{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    font-family: 'Fredoka One', cursive;
+}
+
+@media (max-width: 992px){
+    .bg::before{
+        display: none;
+    }
+    header{
+        padding: 20px;
+    }
+    section{
+        padding: 20px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation li a{
+        font-size: 1.2em;
+        margin: 5px 0;
+    }
+    .toggle{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(img/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: 0.2s;
+        /* z-index: 100; */
+    }
+    .toggle.active{
+        background: url(img/close.png);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: 0.2s;
+        z-index: 20;
+    }
+    .container #scene #text{
+        font-size: 25vw;
+    }
+    .container #scene #text span{
+        text-shadow: 1px 1px 0 #e1e1e1,
+        2px 2px 0 #e1e1e1,
+        3px 3px 0 #e1e1e1,
+        4px 4px 0 #e1e1e1,
+        5px 5px 0 #e1e1e1,
+        6px 6px 0 #e1e1e1,
+        7px 7px 0 #e1e1e1,
+        8px 8px 0 #e1e1e1,
+        15px 25px 0 rgba(0, 0, 0, 0.1);
+    }
+    .container #scene #footer{
+        padding-top: 3%;
+        font-size: 2vw;
+    }
+    /* .imgbx{
+        display: none;
+    } */
+    .content p {
+        font-size: 1em;
+    }
+    #intro{
+        padding: 10px;
+    }
+    .alert-success {
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 720px){
+    .container {
+        margin: 10px 0;
+    }
+}
