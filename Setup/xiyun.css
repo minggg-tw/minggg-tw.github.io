@@ -247,7 +247,7 @@ header .navigation li a.active{
         display: none;
     }
     .content p {
-        font-size: 1em;
+        font-size: 0.9em;
     }
     #intro{
         padding: 10px;
