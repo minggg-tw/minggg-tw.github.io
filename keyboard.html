@@ -6,14 +6,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img\xiyun.png">
+  <link rel="stylesheet" href="\css\keyboard.css">
   <link rel="stylesheet" href="\css\style.css">
-  <link rel="stylesheet" href="\css\member.css">
   <script src="\script\script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 </head>
 
 <body>
+  <script>
+    $(function () {
+      var people = [];
+      $.getJSON('script/hotkey.json', function (data) {
+        $.each(data.keyboard, function (i, f) {
+          if (f.long == true) {
+            var tblRow = "<div class='card'><span id='long'><i>" + f.key + "</i></span><a>" + f.function + "</a><br></div>"
+            $(tblRow).appendTo("#keydata");
+          } else {
+            var tblRow = "<div class='card'><span><i>" + f.key + "</i></span><a>" + f.function + "</a><br></div>"
+            $(tblRow).appendTo("#keydata");
+          }
+        });
+      });
+    });
+  </script>
   <section class="banner">
     <header>
       <a href="\" class="logo">
@@ -22,18 +38,12 @@
       <ul>
         <li><a href="\">首頁</a></li>
         <li><a href="#">公職導覽</a></li>
-        <li><a href="#">工作團隊</a></li>
+        <li><a href="member.html">工作團隊</a></li>
         <li><a href="#">活動剪影</a></li>
-        <li><a href="keyboard.html">按鍵介紹</a></li>
+        <li><a href="#">按鍵介紹</a></li>
       </ul>
     </header>
-    <div class="container">
-      <div class="box one" style="--img:url(/img/chika.png);" data-text="@m1ng.net"></div>
-      <div class="box two" style="--img:url(/img/xiao.png);" data-text="@xiaorou0_0"></div>
-      <div class="box three" style="--img:url(/img/tony.jpg);" data-text="@dommm00"></div>
-      <div class="box four" style="--img:url(/img/battle.png);" data-text="@imbattle"></div>
-      <div class="box five" style="--img:url(/img/miu.jpg);" data-text="@Yunni#9218"></div>
-    </div>
+    <div class="container" id="keydata"></div>
     <div class="daynight">
       <ion-icon name="moon-outline"></ion-icon>
       <ion-icon name="sunny-outline"></ion-icon>
