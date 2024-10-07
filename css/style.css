@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
+
+*{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kiwi Maru', serif;
+}
+
+#index{
+    color: #2196f3;
+}
+
+.banner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    color: #333;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+header .logo span{
+    color: #2196f3;
+}
+
+header ul{
+    display: flex;
+    gap: 40px;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #333;
+    transition: 0.5s;
+}
+
+.key,
+.phone{
+    display: none;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.phone h2{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+}
+
+.phone.night{
+    background: #333;
+}
+
+.phone.night .daynight{
+    background: #444;
+    color: #fff;
+}
+
+.daynight ion-icon:nth-child(2),
+.phone.night .daynight ion-icon:nth-child(1){
+    display: none;
+}
+
+.phone.night .daynight ion-icon:nth-child(2){
+    display: block;
+}
+
+.phone.night h2,
+.phone.night header .logo{
+    color: #fff;
+}
+
+@media (max-width: 1500px) {
+    .container .card {
+      height: 90px;
+    }
+  }
+
+@media (max-width: 1200px){
+    .banner{
+        display: none;
+    }
+    .phone{
+        display: flex;
+    }
+    header{
+        padding: 3% 5%;
+    }
+}
