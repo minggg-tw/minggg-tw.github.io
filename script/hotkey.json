@@ -1,0 +1,119 @@
+{
+    "keyboard": [
+        {
+            "key": "ESC",
+            "function": "暫停選單",
+            "long": true
+        },
+        {
+            "key": "F1",
+            "function": "多功能選單",
+            "long": false
+        },
+        {
+            "key": "F5",
+            "function": "載具選單",
+            "long": false
+        },
+        {
+            "key": "F6",
+            "function": "公職選單",
+            "long": false
+        },
+        {
+            "key": "F8",
+            "function": "Console",
+            "long": false
+        },
+        {
+            "key": "F9",
+            "function": "寵物選單",
+            "long": false
+        },
+        {
+            "key": "F10",
+            "function": "服裝選單",
+            "long": false
+        },
+        {
+            "key": "~",
+            "function": "線上玩家列表",
+            "long": false
+        },
+        {
+            "key": "=",
+            "function": "動作選單",
+            "long": false
+        },
+        {
+            "key": "TAB",
+            "function": "武器選單",
+            "long": true
+        },
+        {
+            "key": "T",
+            "function": "公頻聊天室",
+            "long": false
+        },
+        {
+            "key": "Y",
+            "function": "車輛定速",
+            "long": false
+        },
+        {
+            "key": "U",
+            "function": "上鎖/解鎖車輛",
+            "long": false
+        },
+        {
+            "key": "K",
+            "function": "安全帶",
+            "long": false
+        },
+        {
+            "key": "Z",
+            "function": "切換語音範圍",
+            "long": false
+        },
+        {
+            "key": "X",
+            "function": "舉雙手(投降)",
+            "long": false
+        },
+        {
+            "key": "C",
+            "function": "向後看",
+            "long": false
+        },
+        {
+            "key": "V",
+            "function": "切換視角",
+            "long": false
+        },
+        {
+            "key": "B",
+            "function": "向前指",
+            "long": false
+        },
+        {
+            "key": "N",
+            "function": "語音按鍵發話",
+            "long": false
+        },
+        {
+            "key": "M",
+            "function": "車上座位選單",
+            "long": false
+        },
+        {
+            "key": ",",
+            "function": "角色配件選單",
+            "long": false
+        },
+        {
+            "key": "CTRL",
+            "function": "蹲下",
+            "long": true
+        }
+    ]
+ }
