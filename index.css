@@ -226,6 +226,9 @@ body {
     .details ul li {
         font-size: 0.9em;
     }
+    .lang-bar {
+        width: 80%;
+    }
     .lang-label{
         font-size: 0.9em;
     }
