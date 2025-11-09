@@ -91,12 +91,32 @@
                     <h2>技能 / Skills</h2>
                     <ul>
                         <li>Programming Languages</li>
-                        <ul>
-                            <li>Lua</li>
-                            <li>Python</li>
-                            <li>JAVA</li>
-                            <li>C#</li>
-                        </ul>
+                        <div class="lang-bars">
+                            <div class="lang-item">
+                                <span class="lang-label">Lua</span>
+                                <div class="lang-bar">
+                                    <div class="lang-fill lua" style="width: 90%;"><span>90%</span></div>
+                                </div>
+                            </div>
+                            <div class="lang-item">
+                                <span class="lang-label">Python</span>
+                                <div class="lang-bar">
+                                    <div class="lang-fill python" style="width: 75%;"><span>75%</span></div>
+                                </div>
+                            </div>
+                            <div class="lang-item">
+                                <span class="lang-label">Java</span>
+                                <div class="lang-bar">
+                                    <div class="lang-fill java" style="width: 60%;"><span>60%</span></div>
+                                </div>
+                            </div>
+                            <div class="lang-item">
+                                <span class="lang-label">C#</span>
+                                <div class="lang-bar">
+                                    <div class="lang-fill csharp" style="width: 35%;"><span>35%</span></div>
+                                </div>
+                            </div>
+                        </div>
                         <li>Frontend</li>
                         <ul>
                             <li>HTML & CSS</li>
@@ -140,4 +160,29 @@
             <div class="copyright">Copyright © 2025 XiYun Studio</div>
         </div>
     </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const bars = document.querySelectorAll(".lang-fill");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const targetWidth = el.getAttribute("data-width");
+                        el.style.width = targetWidth;
+                        observer.unobserve(el);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            bars.forEach(bar => {
+                const currentWidth = bar.style.width;
+                bar.setAttribute("data-width", currentWidth);
+                bar.style.width = "0";
+                observer.observe(bar);
+            });
+        });
+    </script>
 </html>
