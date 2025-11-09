@@ -134,6 +134,70 @@ body {
     border-bottom: none;
 }
 
+/* ======= Programming Language ======= */
+/* 語言進度條容器 */
+.lang-bars {
+    margin: 10px 0 15px 0;
+}
+
+/* 每個語言項目 */
+.lang-item {
+    margin-bottom: 8px;
+}
+
+/* 語言名稱 */
+.lang-label {
+    display: inline-block;
+    width: 80px;
+    font-weight: 600;
+}
+
+/* 外層 bar */
+.lang-bar {
+    display: inline-block;
+    width: 70%;
+    height: 18px;
+    background-color: #aaa9;
+    border-radius: 10px;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* 內層填充部分 */
+.lang-fill {
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-end;
+    color: #fff;
+    font-size: 12px;
+    padding-right: 6px;
+    border-radius: 4px 0 0 4px;
+    transition: width 1.2s ease-in-out;
+}
+
+/* 各語言配色 */
+.lang-fill.lua {
+    background-color: #2c2d72;
+}
+
+.lang-fill.python {
+    background-color: #3572A5;
+}
+
+.lang-fill.java {
+    background-color: #ff5757;
+}
+
+.lang-fill.csharp {
+    background-color: #d83aff;
+}
+
+.lang-fill:hover {
+    filter: brightness(1.1);
+}
+
 /* ======= Footer ======= */
 .copyright {
     width: 100%;
@@ -160,6 +224,9 @@ body {
         font-size: 1em;
     }
     .details ul li {
+        font-size: 0.9em;
+    }
+    .lang-label{
         font-size: 0.9em;
     }
     .copyright {
