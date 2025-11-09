@@ -1,0 +1,168 @@
+/* ======= 全域設定 ======= */
+body {
+    margin: 0;
+    font-family: "Noto Sans TC", sans-serif;
+    background-color: #333;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #444;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    max-width: 900px;
+    width: 90%;
+    padding: 40px;
+    margin: 20px 0;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ======= 左側：照片區 ======= */
+.profile-photo {
+    flex: 0 0 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.profile-photo img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #e2932c;
+    object-position: top;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #444;
+    color: #e2932c;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(226, 147, 44, 0.6);
+}
+
+.social-links a:hover {
+    background-color: #e2932c;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(226, 147, 44, 0.9);
+    transform: translateY(-3px);
+}
+
+/* ======= 右側：文字區 ======= */
+.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-info h1 {
+    margin: 0 0 10px;
+    font-size: 2em;
+    color: #e2932c;
+}
+
+.profile-info p.intro {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.details {
+    background-color: #555;
+    border-radius: 8px;
+    padding: 20px 20px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    border: 2px solid transparent; /* 預設透明邊框 */
+}
+
+.details:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(226, 147, 44, 0.6), 0 0 10px rgba(0, 173, 181, 0.3);
+    border: 2px solid #e2932c; /* hover 時顯示亮邊 */
+    background-color: #5a5a5a;
+}
+
+.details h2 {
+    margin-top: 0;
+    color: #e2932c;
+}
+
+.details ul {
+    /* list-style: none; */
+    padding-left: 1.5em;
+    /* margin: 0; */
+}
+
+.details li {
+    padding: 6px 0;
+    /* border-bottom: 1px solid #666; */
+}
+
+.details li:last-child {
+    border-bottom: none;
+}
+
+/* ======= Footer ======= */
+.copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* ======= 響應式設定 ======= */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+    }
+    .profile-photo {
+        margin-bottom: 20px;
+    }
+    .container {
+        gap: 10px;
+    }
+    .profile-info p.intro {
+        font-size: 1em;
+    }
+    .details ul li {
+        font-size: 0.9em;
+    }
+    .copyright {
+        font-size: 0.7em;
+    }
+}
